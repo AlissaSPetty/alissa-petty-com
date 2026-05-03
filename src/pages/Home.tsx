@@ -1,4 +1,7 @@
 import { IconGitHub, IconLinkedIn } from '../components/Icons'
+import alissaPhoto from '../assets/Alissa-Petty.png'
+import gatsbyLogo from '../assets/gatsby.jpg'
+import girlsMakeGamesLogo from '../assets/gmg.jpeg'
 
 const GITHUB = 'https://github.com/AlissaSPetty'
 const LINKEDIN = 'https://www.linkedin.com/in/alissa-petty/'
@@ -42,7 +45,7 @@ export function Home() {
           </div>
           <figure className="hero-photo">
             <img
-              src="src/assets/Alissa-Petty.png"
+              src={alissaPhoto}
               alt="Alissa Petty"
               width={600}
               height={600}
@@ -203,7 +206,7 @@ export function Home() {
               <article className="pub-card">
                 <h3>Getting into gaming featuring women at Hi-Rez Studios</h3>
                 <img
-                  src="src/assets/gmg.jpeg"
+                  src={girlsMakeGamesLogo}
                   alt=""
                   className="pub-logo"
                   width={186}
@@ -221,7 +224,7 @@ export function Home() {
               <article className="pub-card">
                 <h3>How Hi-Rez Studios built their web infra on Gatsby &amp; WordPress</h3>
                 <img
-                  src="src/assets/gatsby.jpg"
+                  src={gatsbyLogo}
                   alt=""
                   className="pub-logo"
                   width={249}

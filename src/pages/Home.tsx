@@ -1,5 +1,4 @@
 import { IconGitHub, IconLinkedIn } from '../components/Icons'
-import { Link } from 'react-router-dom'
 
 const GITHUB = 'https://github.com/AlissaSPetty'
 const LINKEDIN = 'https://www.linkedin.com/in/alissa-petty/'

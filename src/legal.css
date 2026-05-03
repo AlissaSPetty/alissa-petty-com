@@ -1,0 +1,39 @@
+.legal-page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+.legal-header {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 0;
+}
+
+.legal-back {
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.legal-back:hover {
+  text-decoration: underline;
+}
+
+.legal-header h1 {
+  margin: 1.5rem 0 0;
+  font-size: 2rem;
+  color: var(--heading);
+}
+
+.legal-main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 4rem;
+  line-height: 1.65;
+}
+
+.legal-main p {
+  margin: 0 0 1rem;
+}

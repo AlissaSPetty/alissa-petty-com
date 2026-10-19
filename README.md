@@ -22,6 +22,15 @@ The original export referenced images under `https://alissapetty.com/images/...`
 
 To use your real photos and logos, drop files into `public/assets/` and update paths in `src/pages/Home.tsx` (or keep the same filenames to replace in place).
 
-## SPA hosting note
+## Deployment
 
-Client-side routes (`/privacy`, `/legal-notice`) need the host to serve `index.html` for unknown paths (e.g. Netlify `_redirects`, Cloudflare Pages `_routes.json`, or nginx `try_files`).
+Hosted on **Cloudflare Workers** (static assets), configured in `wrangler.jsonc`. Workers Builds is connected to the GitHub repo, so pushes to `main` build and deploy automatically.
+
+To deploy manually:
+
+```bash
+npx wrangler login
+npm run deploy
+```
+
+Client-side routes (`/privacy`, `/legal-notice`) are handled by `not_found_handling: "single-page-application"`, which serves `index.html` for unknown paths.

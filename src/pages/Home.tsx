@@ -1,3 +1,4 @@
+import { Experience } from '../components/Experience'
 import { IconGitHub, IconLinkedIn } from '../components/Icons'
 import alissaPhoto from '../assets/Alissa-Petty.png'
 import gatsbyLogo from '../assets/gatsby.jpg'
@@ -19,11 +20,24 @@ export function Home() {
           <div className="hero-copy">
             <h1>Hiya! My name is Alissa Petty.</h1>
             <p className="lead">
-              I am a Senior Software Engineer with over 9 years of experience at
-              companies like Mailchimp, Intuit, and Hi-Rez Studios. I am actively
-              looking for my next role where I can hit the ground running and make
-              a meaningful impact in the industry.
+              I am a Senior Software Engineer with over 10 years of experience at
+              companies like Mailchimp, Intuit, and Hi-Rez Studios, and I currently
+              work at Soltech.
             </p>
+            <div className="stat-tiles hero-stats">
+              <p>
+                <strong>10+</strong>
+                years shipping
+              </p>
+              <p>
+                <strong>10M+</strong>
+                daily API calls served
+              </p>
+              <p>
+                <strong>~90%</strong>
+                test coverage standards
+              </p>
+            </div>
             <div className="hero-actions">
               <a className="btn btn-outline" href="#skills">
                 Skills
@@ -65,7 +79,7 @@ export function Home() {
                 <h3>Hey there!</h3>
                 <p>
                   I&apos;m Alissa Petty, a Senior Software Engineer who lives in the
-                  Atlanta area. Over the past eight years I&apos;ve dived deep into
+                  Atlanta area. Over the past 10 years I&apos;ve dived deep into
                   React, TypeScript, and modern front-end architecture, building
                   everything from reusable component libraries to high-traffic
                   marketplaces. I love the blend of creativity and precision that
@@ -78,10 +92,15 @@ export function Home() {
                   My career has taken me from revamping legacy LEMP sites at Hi-Rez
                   Studios to leading accessibility-first initiatives at Mailchimp,
                   where I helped cut engineering setup time by 40% with a
-                  Storybook-driven workflow. Most recently I founded The Grail Club,
+                  Storybook-driven workflow. I also founded The Grail Club,
                   a niche online marketplace where I have introduced data-driven A/B
                   testing, and built dashboards in Looker Studio to keep the business
-                  humming. Along the way I&apos;ve embraced AI tools like GitHub
+                  humming. Since May 2026 I&apos;ve been at Soltech,
+                  where I&apos;m helping build a greenfield contract system
+                  of record on React, TypeScript, and Supabase, and leading the
+                  team&apos;s AI adoption with shared Claude Code conventions and an
+                  AI code-review skill that checks pull requests against company
+                  standards. Along the way I&apos;ve embraced AI tools like GitHub
                   Copilot, Claude, and Lumo to turbocharge code generation and
                   testing—often shaving hours off a typical development cycle.
                 </p>
@@ -103,72 +122,88 @@ export function Home() {
           </div>
         </section>
 
+        <Experience />
+
         <section className="section section--skills" id="skills" aria-labelledby="skills-heading">
           <div className="container skills-layout">
             <div className="skills-panel">
               <h2 id="skills-heading" className="section-title">
                 Skills
               </h2>
-              <h4>Technical skills</h4>
-              <ul>
-                <li>SaaS development</li>
-                <li>React, Next.js, Redux Toolkit, TypeScript, JavaScript (ES6+)</li>
-                <li>CSS, Storybook, Material UI, Styled Components, Tailwind</li>
-                <li>JAMstack architecture, HTML5, CSS3, responsive design</li>
-                <li>Relational databases &amp; APIs (MongoDB, SQL)</li>
+              <h4>Languages &amp; frameworks</h4>
+              <ul className="sparkle-list">
+                <li>TypeScript, JavaScript (ES6+)</li>
+                <li>React 19, Gatsby, Vite</li>
+                <li>Node.js (Fastify, Express)</li>
               </ul>
-              <h4>Testing and quality assurance</h4>
-              <ul>
-                <li>Test-driven development (TDD)</li>
-                <li>Visual regression testing with Chromatic &amp; Storybook</li>
-                <li>WCAG 2.1 AA compliance, automated accessibility audits</li>
-                <li>GDPR compliance</li>
+              <h4>APIs &amp; architecture</h4>
+              <ul className="sparkle-list">
+                <li>RESTful API design, GraphQL, schema-driven UIs</li>
+                <li>Multi-tenant systems, serverless &amp; edge functions</li>
+                <li>Caching &amp; read-path optimization, async job pipelines</li>
               </ul>
-              <h4>Team leadership &amp; talent development</h4>
-              <ul>
+              <h4>Data stores</h4>
+              <ul className="sparkle-list">
+                <li>Supabase (Postgres, Auth, RLS, Edge Functions, Realtime)</li>
+                <li>Postgres 15 (pg_cron, migrations, query tuning), MySQL</li>
+                <li>MongoDB, DynamoDB</li>
+              </ul>
+              <h4>Cloud &amp; DevOps</h4>
+              <ul className="sparkle-list">
+                <li>AWS (Lambda, S3, CloudFront), GCP, Azure Static Web Apps, Vercel</li>
+                <li>Docker, Git &amp; GitHub</li>
                 <li>
-                  Mentoring junior engineers using regular code reviews,
-                  pair-programming sessions, and constructive feedback loops.
+                  GitHub Actions CI/CD, protected-branch policies with automated lint
+                  &amp; test gates
                 </li>
-                <li>
-                  Leading cross-functional squads through translating requirements into
-                  technical specs, championing accessibility standards, and using async
-                  communication tools to keep remote teams aligned and productive.
-                </li>
-                <li>
-                  Evaluating candidates on both technical and soft skills, conducting
-                  hands-on interviews to gauge real-world teamwork potential.
-                </li>
+              </ul>
+              <h4>Testing &amp; quality</h4>
+              <ul className="sparkle-list">
+                <li>Test-driven development (TDD) &amp; shift-left testing</li>
+                <li>Playwright, Cypress, Jest, Vitest</li>
+                <li>Code review, ~90% coverage standards</li>
+                <li>WCAG 2.1–aligned, accessible UIs</li>
               </ul>
             </div>
             <div className="skills-panel skills-panel--accent">
               <h2 className="section-title">Expertise</h2>
-              <p className="degree">Auburn University graduate</p>
-              <h4>Analytics &amp; monitoring</h4>
-              <ul>
+              <p className="degree">Auburn University graduate (B.S., 2012, honors)</p>
+              <h4>Identity &amp; access control</h4>
+              <ul className="sparkle-list">
+                <li>Okta (enterprise SSO), OAuth 2.0, third-party account linking</li>
+                <li>JWT &amp; signed state, session management, Supabase Auth</li>
                 <li>
-                  Google Analytics 4 (GA4), Looker Studio, Grafana dashboards, FullStory
+                  Row-level &amp; tenant isolation, AES-256-GCM token encryption at rest
                 </li>
               </ul>
-              <h4>AI-assisted development</h4>
-              <ul>
-                <li>GitHub Copilot, Claude, Lumo (component generation)</li>
-              </ul>
-              <h4>Collaboration &amp; documentation</h4>
-              <ul>
+              <h4>AI-assisted engineering</h4>
+              <ul className="sparkle-list">
+                <li>Claude Code, Cursor, ChatGPT, GitHub Copilot, Lumo</li>
                 <li>
-                  Storybook, Chromatic, design system documentation, async remote teamwork
+                  Team AI conventions (CLAUDE.md, rules files, shared prompts) and an AI
+                  code-review skill enforcing company standards
+                </li>
+                <li>
+                  LLM integration (Google Gemini multimodal, structured JSON output,
+                  prompt engineering)
                 </li>
               </ul>
-              <h4>Performance &amp; observation</h4>
-              <ul>
+              <h4>Reliability &amp; observability</h4>
+              <ul className="sparkle-list">
+                <li>On-call &amp; SLA ownership, production troubleshooting</li>
                 <li>
-                  Lighthouse, Web Vitals, code-splitting, lazy loading, caching strategies
+                  FullStory session replay, funnel &amp; frustration-signal analysis
                 </li>
+                <li>Alerting &amp; health digests, retry/backoff</li>
               </ul>
-              <h4>State management &amp; data</h4>
-              <ul>
-                <li>GraphQL, RESTful APIs, Apollo Client, Redux Toolkit</li>
+              <h4>Leadership</h4>
+              <ul className="sparkle-list">
+                <li>Tech lead on multiple projects, cross-team coordination</li>
+                <li>Mentoring, technical hiring (technical &amp; behavioral interviews)</li>
+                <li>
+                  Engineering workshops &amp; playbooks, Agile/Scrum, cross-org
+                  collaboration with Product
+                </li>
               </ul>
             </div>
           </div>
@@ -249,8 +284,8 @@ export function Home() {
               How can I help?
             </h2>
             <p className="cta-lead">
-              I am actively looking for my next opportunity to commit great code and
-              build lasting relationships. Want to chat? Reach out!
+              I love committing great code and building lasting relationships.
+              Want to chat? Reach out!
             </p>
             <div className="services-grid">
               <article className="card card--service">
